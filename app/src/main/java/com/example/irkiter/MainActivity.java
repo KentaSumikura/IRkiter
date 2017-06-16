@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //つるだこうしん
+        //つるだこうしんあああ
 
         //セットアップボタンつるだあ
         final Button button = (Button)findViewById(R.id.buttonSetup);
