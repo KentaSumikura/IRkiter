@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public  void setupbtn(){
-
+        String a = "";
         Intent intent = new Intent(this, IRKitSetupActivity.class);
         startActivityForResult(intent, REQUEST_IRKIT_SETUP);
 
