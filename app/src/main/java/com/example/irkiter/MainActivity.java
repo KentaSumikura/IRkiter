@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         //つるだこうしんあああ   2017/6/19
 
-        //セットアップボタンつるだあ
+        //セットアップボタンつるだあmori
         final Button button = (Button)findViewById(R.id.buttonSetup);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
