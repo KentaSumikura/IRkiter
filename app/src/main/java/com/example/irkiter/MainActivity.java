@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //セットアップボタンつるだあすみくら変更
+        //つるだこうしんあああ   2017/6/19
+        //のだ　やまもと
+        //セットアップボタンつるだああ
         final Button button = (Button)findViewById(R.id.buttonSetup);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public  void setupbtn(){
-        String a = "";
+
         Intent intent = new Intent(this, IRKitSetupActivity.class);
         startActivityForResult(intent, REQUEST_IRKIT_SETUP);
 
