@@ -28,10 +28,27 @@ public class IRkitterDBOpenHelper extends SQLiteOpenHelper
     {
         Log.d(TAG, "ContactDBOpenHelper.onCreateが呼ばれました");
         //irkitテーブルを生成
-        //@formatter:off
         database.execSQL("CREATE TABLE irkit("
-            + "irid integer primary key autoincrement,"
+            + "redid integer primary key autoincrement,"
             + "irname text not null,");
+
+        //infraredテーブルを生成
+        database.execSQL("CREATE TABLE infrared("
+                + "irid integer primary key autoincrement,"
+                + "redpattern text not null,");
+
+        //iconテーブルを生成
+        database.execSQL("CREATE TABLE icon("
+                + "iconid integer primary key autoincrement,"
+                + "url text not null,");
+
+        //orderテーブルを生成
+        database.execSQL("CREATE TABLE order("
+                + "irid integer primary key ,"
+                + "redid integer primary key ,"
+                + "irname text not null,"
+                + "foreign key ()");
+
     }
 
 }
