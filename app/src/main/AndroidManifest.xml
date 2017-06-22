@@ -24,7 +24,8 @@
             android:name="com.getirkit.IRKIT_API_KEY"
             android:value="YOUR_API_KEY" />
 
-        <activity android:name=".VoiceConf"></activity>
+        <activity android:name=".VoiceConf" />
+        <activity android:name=".WifiConf"></activity>
     </application>
 
 </manifest>
