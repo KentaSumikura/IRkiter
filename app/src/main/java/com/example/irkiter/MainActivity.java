@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //つるだこうしんあああ   2017/6/19
-        //のだ　やまもと
+        //のだ　やまもと  rida-
         //セットアップボタンつるだああ
         final Button button = (Button)findViewById(R.id.buttonSetup);
         button.setOnClickListener(new View.OnClickListener() {
