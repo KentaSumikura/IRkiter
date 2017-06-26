@@ -25,7 +25,9 @@
             android:value="YOUR_API_KEY" />
 
         <activity android:name=".VoiceConf" />
-        <activity android:name=".WifiConf"></activity>
+        <activity android:name=".WifiConf" />
+        <activity android:name=".IRkitListActivity" />
+        <activity android:name=".SignalActivity"></activity>
     </application>
 
 </manifest>

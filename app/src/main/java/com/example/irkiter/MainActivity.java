@@ -24,9 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //つるだこうしんあああ   2017/6/19
-        //のだ　やまもと  rida-
-        //セットアップボタンつるだああ
+        //セットアップボタン
         final Button button = (Button)findViewById(R.id.buttonSetup);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -45,6 +43,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //登録済みIRkitボタン
+        final Button button3 = (Button)findViewById(R.id.buttonirkit);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (v == button3) {
+                    signalbtn();
+                }
+            }
+        });
+
+        //登録済み赤外線ボタン
+        final Button button4 = (Button)findViewById(R.id.buttonInfrared);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (v == button4) {
+                    signalbtn();
+                }
+            }
+        });
+
 
                 // ContextをセットしてSDKを初期化する。すでに初期化済みの場合は
                 // Contextのセットのみ行われる。
@@ -127,6 +146,20 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, WaitSignalActivity.class);
         startActivityForResult(intent, REQUEST_WAIT_SIGNAL);
+
+    }
+
+    public  void Irkitbtn(){
+
+        Intent intent = new Intent(this, IRkitListActivity.class);
+        startActivity(intent);
+
+    }
+
+    public  void Infrabtn(){
+
+        Intent intent = new Intent(this, SignalActivity.class);
+        startActivity(intent);
 
     }
 
