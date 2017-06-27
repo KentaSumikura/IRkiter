@@ -52,20 +52,20 @@ public class MainActivity extends AppCompatActivity {
 
         //登録済みIRkitボタン
         final Button button3 = (Button)findViewById(R.id.buttonirkit);
-        button2.setOnClickListener(new View.OnClickListener() {
+        button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (v == button3) {
-                    signalbtn();
+                    Irkitbtn();
                 }
             }
         });
 
         //登録済み赤外線ボタン
         final Button button4 = (Button)findViewById(R.id.buttonInfrared);
-        button2.setOnClickListener(new View.OnClickListener() {
+        button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (v == button4) {
-                    signalbtn();
+                    Infrabtn();
                 }
             }
         });
