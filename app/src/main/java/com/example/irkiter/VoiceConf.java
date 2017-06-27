@@ -44,13 +44,13 @@ public class VoiceConf extends AppCompatActivity {
             SQLiteDatabase db = helper.getWritableDatabase();
 
             //追加するデータを格納するContentValuesを生成
-            ContentValues values = new ContentValues();
+            /*ContentValues values = new ContentValues();
             values.put(voice.irid, irkitid);
             values.put(voice.redid, infraredid);              //irkitと登録する赤外線のidがないと実験できない
             values.put(voice.voice, resultsString);
             //戻り値は生成されたデータの_IDが返却される
             long id = db.insert(voice, null, values);
-            Log.d(TAG, "insert data:" + id);
+            Log.d(TAG, "insert data:" + id);*/
 
             // トーストを使って結果表示
             Toast.makeText(this, resultsString, Toast.LENGTH_LONG).show();
