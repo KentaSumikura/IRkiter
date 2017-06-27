@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class IRkitterDBOpenHelper extends SQLiteOpenHelper
 {
-    private  static final String TAG = "IRkitterDBOpenHelper";
+    static final String TAG = "IRkitterDBOpenHelper";
 
     static final String DATABASE_NAME = "irkitter.db";
     static final int DATABASE_VERSION = 1;

@@ -1,9 +1,12 @@
 package com.example.irkiter;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.content.ActivityNotFoundException;
 import android.widget.Toast;
@@ -34,6 +37,20 @@ public class VoiceConf extends AppCompatActivity {
             // 取得した文字列を結合
             String resultsString = "";
             resultsString += results.get(0);
+
+            //IRkitterDBOpenHelperを生成
+            IRkitterDBOpenHelper helper = new IRkitterDBOpenHelper(this);
+            //書き込み可能なSQLiteDatabaseインスタンスを取得
+            SQLiteDatabase db = helper.getWritableDatabase();
+
+            //追加するデータを格納するContentValuesを生成
+            ContentValues values = new ContentValues();
+            values.put(voice.irid, irkitid);
+            values.put(voice.redid, infraredid);              //irkitと登録する赤外線のidがないと実験できない
+            values.put(voice.voice, resultsString);
+            //戻り値は生成されたデータの_IDが返却される
+            long id = db.insert(voice, null, values);
+            Log.d(TAG, "insert data:" + id);
 
             // トーストを使って結果表示
             Toast.makeText(this, resultsString, Toast.LENGTH_LONG).show();
