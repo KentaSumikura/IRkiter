@@ -1,6 +1,7 @@
 package com.example.irkiter;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //IRkitterDBOpenHelperを生成
+        IRkitterDBOpenHelper helper = new IRkitterDBOpenHelper(this);
+        //書き込み可能なSQLiteDatabaseインスタンスを取得
+        SQLiteDatabase db = helper.getWritableDatabase();
 
         //セットアップボタン
         final Button button = (Button)findViewById(R.id.buttonSetup);
